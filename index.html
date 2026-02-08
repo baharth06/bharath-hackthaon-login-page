@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premium Auth UI</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Animated Background -->
+  <div class="bg">
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+    <div class="noise"></div>
+  </div>
+
+  <main class="page">
+    <section class="auth-wrap">
+
+      <!-- Left Graphics -->
+      <div class="left-visual">
+        <div class="floating-card">
+          <div class="cube"></div>
+          <div class="ring"></div>
+          <div class="mini"></div>
+        </div>
+
+        <div class="text-area">
+          <h1 class="hero-title"></h1>
+          <p class="hero-sub">
+            
+          </p>
+        </div>
+      </div>
+
+      <!-- Right Auth Card -->
+      <div class="auth-card">
+        <div class="tabs">
+          <button class="tab-btn active" data-target="loginForm">Login</button>
+          <button class="tab-btn" data-target="registerForm">Register</button>
+          <div class="tab-indicator"></div>
+        </div>
+
+        <!-- LOGIN FORM -->
+        <form id="loginForm" class="form active">
+          <h2 class="form-title" style="text-align: center;">Login</h2>
+
+          <div class="field">
+            <label>Name:</label>
+            <input type="text" id="loginName" placeholder="Enter your name" />
+          </div>
+
+          <div class="field">
+            <label>Password:</label>
+            <div class="password-box">
+              <input type="password" id="loginPassword" placeholder="Enter your password" />
+              <button type="button" class="eye-btn" data-eye="loginPassword">👁</button>
+            </div>
+          </div>
+
+          <div class="row">
+            <label class="checkbox">
+              <input type="checkbox" id="showLoginPass" />
+              <span>Show Password</span>
+            </label>
+
+            <a class="link" href="#">Forgot Password?</a>
+          </div>
+
+          <button type="submit" class="primary-btn">
+            <span>Login</span>
+            <span class="shine"></span>
+          </button>
+
+          <p class="bottom-text">
+            Don’t have an account?
+            <a class="switch-link" href="#" data-switch="registerForm">Register</a>
+          </p>
+        </form>
+
+        <!-- REGISTER FORM -->
+        <form id="registerForm" class="form">
+          <h2 class="form-title" style="text-align: center;">Register</h2>
+
+          <div class="field">
+            <label>Name:</label>
+            <input type="text" id="regName" placeholder="Enter your full name..." />
+          </div>
+
+          <div class="field">
+            <label>Email Address:</label>
+            <input type="email" id="regEmail" placeholder="Enter your email address" />
+          </div>
+
+          <div class="field">
+            <label>Phone Number:</label>
+            <input type="tel" id="regPhone" placeholder="Enter your phone number" />
+          </div>
+
+          <div class="field">
+            <label>Create Password:</label>
+            <div class="password-box">
+              <input type="password" id="regPassword" placeholder="Create a strong password" />
+              <button type="button" class="eye-btn" data-eye="regPassword">👁</button>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Confirm Password:</label>
+            <div class="password-box">
+              <input type="password" id="regConfirm" placeholder="Re-enter your password" />
+              <button type="button" class="eye-btn" data-eye="regConfirm">👁</button>
+            </div>
+          </div>
+
+          <label class="checkbox">
+            <input type="checkbox" id="showRegPass" />
+            <span>Show Password:</span>
+          </label>
+
+          <button type="submit" class="primary-btn">
+            <span>Register</span>
+            <span class="shine"></span>
+          </button>
+
+          <p class="bottom-text">
+            Already have an account?
+            <a class="switch-link" href="#" data-switch="loginForm">Login</a>
+          </p>
+
+          <p class="terms">
+            By creating an account, you agree to our <span>Terms</span> & <span>Privacy Policy</span>.
+          </p>
+        </form>
+
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
